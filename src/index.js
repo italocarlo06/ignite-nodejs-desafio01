@@ -28,7 +28,7 @@ app.post('/users', (request, response) => {
 
   const user = users.find( user => user.username === username );
   if (user){
-    return response.status(400).send({ error: "User already registered!"});
+    return response.status(400).json({ error: "User already registered!"});
   }
 
   const newuser = {
